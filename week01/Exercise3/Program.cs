@@ -7,7 +7,6 @@ class Program
         //creating a random class for the computer to pick any number randomly from 0 - 100 just like ramdom.randit in python
         Random randomGenerator = new Random();
         int number = randomGenerator.Next(1, 100);
-        Console.WriteLine($"What is the magic number? {number}");
 
         //declaring an initial variable for guess
         int guess = 0;

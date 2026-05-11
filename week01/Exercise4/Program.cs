@@ -11,7 +11,7 @@ class Program
         //variable for adding total 
         int sum = 0;
 
-        int maxNum = -1;
+        int maxNum = int.MinValue;
 
         int number = -1;
 
@@ -29,12 +29,14 @@ class Program
             //Converting input to integer
             number = int.Parse(num);
 
-            myNumbers.Add(number);
+            //removing 0 from the list
+            if (number != 0)
+            {
+                myNumbers.Add(number);
+            }
         }
 
-        //Removing 0 which is the last out of the list
-        myNumbers.Remove(0);
-
+        //sorting the list
         myNumbers.Sort();
 
         int count = myNumbers.Count;
@@ -60,7 +62,7 @@ class Program
 
 
         //Calculating the average
-        int average = sum / count;
+        double average = (double)sum / count;
 
         Console.WriteLine($"The sum is: {sum}");
         Console.WriteLine($"The average is: {average}");
@@ -68,7 +70,7 @@ class Program
         Console.WriteLine($"The Lowest positive number: {closest}");
         Console.WriteLine("The Sorted List is:");
 
-        //looping through the numbers
+        //looping through the numbers to display the sorted list
         foreach (int mySort in myNumbers)
         {
             Console.WriteLine(mySort);
