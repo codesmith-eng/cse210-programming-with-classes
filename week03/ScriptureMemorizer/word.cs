@@ -1,5 +1,18 @@
 using System;
 
+// The main job of this word class is to represent a single word in the scripture memorization program. 
+// It keeps track of two things: what the word is, and whether it should be visible 
+// or hidden (replaced by underscores) on the screen.
+
+
+//Summary of this class works in action:
+// Imagine the program creates the word "Apple".
+
+// At first, GetDisplayText() returns "Apple".
+
+// The program calls .Hide().
+
+// Now, GetDisplayText() returns "_____".
 
 public class Word
 {
@@ -7,9 +20,11 @@ public class Word
     private string _text;
 
     //checks whether the word is hidden
-    //if false = visible
-    //if true = hidden
+    //if false, the word is visible
+    //if true is hidden
     private bool _isHidden;
+
+
 
     //-----constructor for Word class-----------------------
     public Word(string text)
@@ -17,16 +32,10 @@ public class Word
         _text = text; //Save the word
 
         //the word starts visible
-        _isHidden = false;
+        _isHidden = false;   //the word starts visible first
     }
 
-    //-------------methods-----------------
-    //----------this method hide the word
-    public void Hide()
-    {
-        //--------- Hide the word
-        _isHidden = true;
-    }
+
 
     //------- Show the word again--------
     public void Show()
@@ -35,6 +44,16 @@ public class Word
         _isHidden = false;
     }
 
+
+    //----------this method hide the word when enter is pressed
+    public void Hide()
+    {
+        //--------- Hide the word when enter is pressed
+        _isHidden = true;
+    }
+
+
+
     //-------check if word is hidden------------
     public bool IsHidden()
     {
@@ -42,16 +61,17 @@ public class Word
         return _isHidden;
     }
 
+    //This method decides what gets printed to the screen
     public string GetDisplayText()
     {
-        //If hidden, show underscores
+        //calling _isHidden to check if is true or false
         if (_isHidden)
         {
-            //create underscores as same length as word
+            //if _isHidden is true, meaning if the word are truly hidden, show underscore for the same length of words hidden
             return new string('_', _text.Length);
         }
 
-        //otherwise show actual word
+        //if _isHidden is false, meaning, no word is hidden, just return the original word
         return _text;
     }
 }

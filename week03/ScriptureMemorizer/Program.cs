@@ -1,11 +1,13 @@
 using System;
 
 //I exceed the requirement by adding date method to help the user know the day he/she is using the scripture memorizer 
+//the program continues till all words are hidden or the user enter quit
 class Program
 {
 
     static void Main(string[] args)
     {
+
 
         DateTime theCurrentTime = DateTime.Now;
         string date = theCurrentTime.ToShortDateString();
@@ -38,14 +40,18 @@ class Program
                 break;
             }
 
+
             //  CRITICAL CHECK: If everything is hidden, break out of the program
-            else if (scripture.IsCompletelyHidden())
+            if (scripture.IsCompletelyHidden())
             {
-                break;
+                break; //break out of the program
             }
 
-            //Hide random words if enter is pressed
+
+            //Hide random words if enter is pressed. 
+            //The program continues until the program ends
             scripture.HideRandomWords(2);
+
         }
 
         //message to display if the program ends
