@@ -8,6 +8,7 @@ public class Activity
     private int _duration;
 
 
+
     public Activity(string name, string description)
     {
         _name = name;
@@ -32,7 +33,7 @@ public class Activity
 
         Console.WriteLine();
 
-        Console.WriteLine(Getdescription()); //displaying the description of the activity
+        Console.WriteLine(GetDescription()); //displaying the description of the activity
 
         Console.WriteLine();
         
@@ -54,7 +55,7 @@ public class Activity
     }
 
     //getter for description
-    public string Getdescription()
+    public string GetDescription()
     {
         return _description;
     }
