@@ -82,13 +82,13 @@ public class GoalManager
             string eternalName = Console.ReadLine();
 
             Console.Write("What is a short description of it? ");
-            string eternaldesc = Console.ReadLine();
+            string eternalDesc = Console.ReadLine();
 
             Console.Write("What is the amount of points associated with this goal? ");
-            int theetPoint = int.Parse(Console.ReadLine());
+            int theEtPoint = int.Parse(Console.ReadLine());
 
             // Create a fresh new instance here
-            EternalGoal newEternalGoal = new EternalGoal(eternalName, eternaldesc, theetPoint);
+            EternalGoal newEternalGoal = new EternalGoal(eternalName, eternalDesc, theEtPoint);
             _goals.Add(newEternalGoal);
         }
         else if (theGoal == 3)
@@ -193,9 +193,9 @@ public class GoalManager
             //saving the score first
             outputFile.WriteLine(GetScore());
 
-            foreach (Goal thegoals in _goals)
+            foreach (Goal theGoals in _goals)
             {
-                outputFile.WriteLine(thegoals.GetStringRepresentation());
+                outputFile.WriteLine(theGoals.GetStringRepresentation());
             }
         }
         Console.WriteLine("Your Goals are saved successfully!");

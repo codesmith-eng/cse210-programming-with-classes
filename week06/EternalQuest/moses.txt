@@ -1,0 +1,4 @@
+800
+SimpleGoal:moses|love|100|True
+EternalGoal:gospel|love gospel|100
+ChecklistGoal:church calling|magnifying|100|300|3|3
