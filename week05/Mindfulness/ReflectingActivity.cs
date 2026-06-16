@@ -25,7 +25,7 @@ public class ReflectingActivity : Activity
         "How can you keep this experience in mind in the future?"
     };
 
-    //ReflectingActivity inheriting the constructor of the base class
+    //ReflectingActivity inheriting name and description from the base class
     public ReflectingActivity(string name, string description) : base(name, description)
     {
 
@@ -73,7 +73,7 @@ public class ReflectingActivity : Activity
         //end message
         DisplayEndingMessage();
         Console.WriteLine($"You have completed {ShowCountDown()} seconds of Reflecting Activity");
-        
+
         ShowSpinner();
 
 

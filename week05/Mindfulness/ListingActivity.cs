@@ -13,6 +13,7 @@ public class ListingActivity : Activity
         "--Who are some of your personal heroes?"
     };
 
+    //Listing Activity inherited name and description from the base class
     public ListingActivity(string name, string description) : base(name, description)
     {
 
