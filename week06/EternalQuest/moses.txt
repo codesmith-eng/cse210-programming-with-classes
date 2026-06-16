@@ -1,6 +1,0 @@
-2000
-SimpleGoal:Love|love God|100|True
-EternalGoal:fuck|fuck bitches|100
-ChecklistGoal:rocking|rocking girls|100|300|3|3
-SimpleGoal:repent|repent from my sing|1000|True
-SimpleGoal:loving|loving my babe|100|True
