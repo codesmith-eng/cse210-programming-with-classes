@@ -123,7 +123,7 @@ public class GoalManager
         if (_goals.Count == 0)
         {
             Console.WriteLine("You have no goals to record events for.");
-            return;
+            return; //this return takes me out of this method 
         }
 
         Console.WriteLine("The goals are:");
